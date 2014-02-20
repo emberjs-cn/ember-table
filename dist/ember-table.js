@@ -1273,6 +1273,7 @@ Ember.Table.ScrollPanel = Ember.View.extend(Ember.AddeparMixins.StyleBindingsMix
 Ember.Table.EmberTableComponent = Ember.Component.extend(Ember.AddeparMixins.StyleBindingsMixin, Ember.AddeparMixins.ResizeHandlerMixin, {
   layoutName: 'components/ember-table',
   classNames: ['ember-table-tables-container'],
+  classNameBindings: ['enableContentSelection:ember-table-content-selectable'],
   styleBindings: ['height'],
   height: Ember.computed.alias('_tablesContainerHeight'),
   columns: null,
@@ -1285,6 +1286,7 @@ Ember.Table.EmberTableComponent = Ember.Component.extend(Ember.AddeparMixins.Sty
   hasFooter: true,
   forceFillColumns: false,
   enableColumnReorder: true,
+  enableContentSelection: false,
   selection: null,
   tableRowViewClass: 'Ember.Table.TableRow',
   actions: {
